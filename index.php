@@ -1,16 +1,8 @@
 <?php
-  session_start();
-
-  // if(!isset($_SESSION['Name'])){
-  //   // echo "<script> 
-  //   //     location.href = 'http://localhost/Nyoba-Tribe/sign%20up.php';
-  //   // </script>";
-  //   // exit();
-
-  if($_SESSION['status_login']!=true){
-    header('Location: log in.php');
-  
-  }
+ session_start();
+ if(!isset($_SESSION['Name'])){
+     header('location: log in.php');
+ }
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +32,13 @@
           <li><a href="#aboutus">About Us</a></li>
           <li><a href="log in.php" class="daftar">Log In</a></li>
           <li><a href="sign up.php" class="daftar">Sign Up</a></li>
+          <li><a href="log out.php" class="daftar">Log Out</a></li>
         </ul>
       </div>
       <div class="content">
         <h1>JAVA CULTURE & ART.</h1>
         <br>
-
+        
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit et aperiam maxime repellat nostrum!
           Explicabo ad voluptatem magni dolore nesciunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Maiores, animi! Lorem ipsum </p>
