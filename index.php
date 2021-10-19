@@ -1,3 +1,18 @@
+<?php
+  session_start();
+
+  // if(!isset($_SESSION['Name'])){
+  //   // echo "<script> 
+  //   //     location.href = 'http://localhost/Nyoba-Tribe/sign%20up.php';
+  //   // </script>";
+  //   // exit();
+
+  if($_SESSION['status_login']!=true){
+    header('Location: log in.php');
+  
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,15 +31,15 @@
   <nav>
     <div class="wrapper"></div>
     <!--Untuk logo dan menu pada tab bar-->
-    <div class="logo"><a href=""><img src="TRIBE-removebg-preview.png" alt="logo" /></a>
+    <div class="logo"><a href=""><img src="img/TRIBE-removebg-preview.png" alt="logo" /></a>
       <div class="menu">
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="#culture">Culture</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#aboutus">About Us</a></li>
-          <li><a href="log in.html" class="daftar">Log In</a></li>
-          <li><a href="sign up.html" class="daftar">Sign Up</a></li>
+          <li><a href="log in.php" class="daftar">Log In</a></li>
+          <li><a href="sign up.php" class="daftar">Sign Up</a></li>
         </ul>
       </div>
       <div class="content">
@@ -50,7 +65,7 @@
       <div class="kolom">
         <div class="img">
           <a target="_blank" href="suku jawa.jpg">
-            <img src="suku jawa.jpg" alt="suku jawa" width="300" height="200">
+            <img src="img/suku jawa.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <h3>Suku Jawa</h3>
           <div class="desc">Suku Jawa merupakan suku bangsa terbesar di Indonesia yang berasal dari Jawa....</div>
@@ -59,7 +74,7 @@
 
         <div class="img">
           <a target="_blank" href="suku betawi.jpg">
-            <img src="suku betawi.jpg" alt="suku betawi" width="300" height="200">
+            <img src="img/suku betawi.jpg" alt="suku betawi" width="300" height="200">
           </a>
           <h3>Suku Betawi</h3>
           <div class="desc">Suku Betawi adalah sebuah suku bangsa di Indonesia yang penduduknya umumnya bertempat
@@ -68,7 +83,7 @@
 
         <div class="img">
           <a target="_blank" href="suku madura.jpg"></a>
-          <img src="suku madura.jpg" alt="suku madura" width="300px" height="200px">
+          <img src="img/suku madura.jpg" alt="suku madura" width="300px" height="200px">
           </a>
 
           <h3>Suku Madura</h3>
@@ -77,7 +92,7 @@
         </div>
         <div class="img">
           <a target="_blank" href="suku sunda.jpg">
-            <img src="suku sunda.jpg" alt="suku sunda" width="300" height="200">
+            <img src="img/suku sunda.jpg" alt="suku sunda" width="300" height="200">
           </a>
           <h3>Suku Sunda</h3>
           <div class="desc">Suku Sunda merupakan gugusan etnis yang bersumber dari anggota barat pulau Jawa,
@@ -86,7 +101,7 @@
 
         <div class="img">
           <a target="_blank" href="suku osing.jpg">
-            <img src="suku osing.jpg" alt="suku osing" width="300" height="200">
+            <img src="img/suku osing.jpg" alt="suku osing" width="300" height="200">
           </a>
           <h3>Suku Osing</h3>
           <div class="desc">Suku Osing atau biasa diucapkan Jawa Osing adalah penduduk asli Banyuwangi atau juga disebut
@@ -95,7 +110,7 @@
 
         <div class="img">
           <a target="_blank" href="suku tengger.jpg"></a>
-          <img src="suku tengger.jpg" alt="suku tengger" width="300px" height="200px">
+          <img src="img/suku tengger.jpg" alt="suku tengger" width="300px" height="200px">
           </a>
           <h3>Suku Tengger</h3>
           <div class="desc">Suku Tengger merupakan suku asli yang mendiami wilayah Gunung Bromo dan Semeru....</div>
@@ -111,7 +126,7 @@
       <div class="kolom">
         <div class="img">
           <a target="_blank" href="berita 1.jpg">
-            <img src="berita 1.jpg" alt="suku jawa" width="300" height="200">
+            <img src="img/berita 1.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <p>-RABU, 15 SEPTEMBER 2021 | 09:46 WIB</p>
           <h3>Hikayat Orang Jawa di Kaledonia Baru</h3>
@@ -121,7 +136,7 @@
 
         <div class="img">
           <a target="_blank" href="berita 2.jpg">
-            <img src="berita 2.jpg" alt="suku jawa" width="300" height="200">
+            <img src="img/berita 2.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <p>-SABTU, 21 AGUSTUS 2021 | 07:23 WIB</p>
           <h3>Gambang Kromong: Sejarah, Instrumen, dan Contoh Alat Musiknya</h3>
@@ -131,7 +146,7 @@
 
         <div class="img">
           <a target="_blank" href="berita 3.jpg">
-            <img src="berita 3.jpg" alt="suku jawa" width="300" height="200">
+            <img src="img/berita 3.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <p>-SABTU 07 SEPTEMBER 2021 | 21:16 WIB</p>
           <h3>KarimunBesar, Pulau di Perbatasan yang Dihuni 25 Suku Berbeda</h3>
@@ -141,7 +156,7 @@
 
         <div class="img">
           <a target="_blank" href="berita44.jpg">
-            <img src="berita44.jpg" alt="suku jawa" width="300" height="200">
+            <img src="img/berita44.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <p>-RABU, 27 SEPTEMBER 2021 | 11:40 WIB</p>
           <h3>Mengenal Suku Mentawai dan 4 Marga Besarnya</h3>
@@ -180,7 +195,7 @@
           </div>
           <div class="kontenImg">
             <div class="image-section">
-              <img src="berita 1.jpg">
+              <img src="img/berita 1.jpg">
             </div>
           </div>
         </div>

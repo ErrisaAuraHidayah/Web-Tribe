@@ -13,18 +13,15 @@
         <h2>LOG IN</h2>
         
         <div class="border"></div>
-        <form action="index.html">
+        <form action="proses-login.php" method="post">
             <div>
-                <input type="text" name="" required="" placeholder="Name">
+                <input type="email" name="Email" required="" placeholder="Email">
             </div>
             <div>
-                <input type="email" name="" required="" placeholder="Email">
-            </div>
-            <div>
-                <input type="password" name="" required="" placeholder="Password" class="form-password" >
+                <input type="password" name="Password" required="" placeholder="Password" class="form-password" >
             </div>
             
-            <input type="submit" name="" value="Submit">
+            <input type="submit" name="Submit" value="Submit">
         </form>
     </div>
 </body>
