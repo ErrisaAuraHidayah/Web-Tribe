@@ -186,7 +186,7 @@ nav ul li a{
     width: 23%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 500px;
+    height: 100px;
 }
 #blog p{
     text-align: left;
@@ -215,6 +215,7 @@ nav ul li a{
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    
     
 }
 .selengkapnya{

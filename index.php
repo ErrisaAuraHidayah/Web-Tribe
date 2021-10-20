@@ -35,6 +35,38 @@
   .Tambah:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+  .ubah1{
+    background-color: #31D2F2; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 5px 8px 15px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .ubah2{
+    background-color: #BB2D3B; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 0px 8px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
   </style>
 
 </head>
@@ -190,7 +222,6 @@
           while($data_blog=mysqli_fetch_array($qry_blog)){
           $no++;
         ?>
-        
           <div class="img">
             <a target="_blank" href="">
               <img src="<?php echo $data_blog['gambar'] ?> " alt="suku jawa" width="300" height="200">
@@ -198,13 +229,18 @@
             <p>-<?php echo $data_blog['hari'] ?>, <?php echo $data_blog['tanggal'] ?> | <?php echo $data_blog['waktu'] ?> WIB</p>
             <h3><?php echo $data_blog['judul'] ?></h3>
             <div class="desc"><?php echo $data_blog['berita']?></div>
+
+            <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
+            <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
           </div>
+           
         <?php
             }
         ?>
+
         </div>
         <button class="Tambah" ><a href="tambah_blog.php">Create New Blog</a></button>
-        
+      
         <div class="selengkapnya">
           <a href="">Lihat selengkapnya >></a>
         </div>
