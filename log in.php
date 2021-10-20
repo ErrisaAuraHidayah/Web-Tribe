@@ -23,6 +23,8 @@
             </div>
             
             <input type="submit" name="Submit" value="Submit">
+
+            <p style="text-align: center; color: grey; font-size: 13px ">Belum punya akun? ayo <a href="sign up.php">Daftar</a></p>
         </form>
     </div>
 </body>

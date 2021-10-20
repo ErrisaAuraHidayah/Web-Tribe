@@ -14,9 +14,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Tribe</title>
   <link rel="stylesheet" href="stye.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <style>
+    .Tambah {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 13px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+  }
+  .Tambah:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  </style>
+
 </head>
+
 
 <body>
   <!--Nav ini untuk menampung dalam tab bar-->
@@ -116,13 +138,15 @@
     <!--Untuk Blog-->
     <section id="blog">
       <h1>BLOG.</h1>
+      <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+      
       <div class="kolom">
         <div class="img">
           <a target="_blank" href="berita 1.jpg">
             <img src="img/berita 1.jpg" alt="suku jawa" width="300" height="200">
           </a>
           <p>-RABU, 15 SEPTEMBER 2021 | 09:46 WIB</p>
-          <h3>Hikayat Orang Jawa di Kaledonia Baru</h3>
+          <h3><a href="blog/berita1.php">Hikayat Orang Jawa di Kaledonia Baru</a></h3>
           <div class="desc">Selain Suriname, komunitas orang Jawa juga ada d negara Kelodonia Baru. Merea pertama kali
             datang ke sini pada tahun 1. Begini kisahnya</div>
         </div>
@@ -134,7 +158,7 @@
           <p>-SABTU, 21 AGUSTUS 2021 | 07:23 WIB</p>
           <h3>Gambang Kromong: Sejarah, Instrumen, dan Contoh Alat Musiknya</h3>
           <div class="desc">Gambang kromong adalah kessenian Betawi yang terdiri dari beberapa instrumen musik. Berikut
-            penjelasan dan contoh alat musik gambang kromong Indonesia.</div>
+            penjelasan dan contoh alat musik gambang kromong Indonesia. </div>
         </div>
 
         <div class="img">
@@ -157,6 +181,26 @@
             memiliki 4 marga besar sebagai berikut.</div>
         </div>
         </div>
+        <?php
+          include 'koneksi.php';
+          $qry_blog = mysqli_query($conn, "select * from blog where nomer = nomer");
+          $no = 0;
+          while($data_blog=mysqli_fetch_array($qry_blog));
+          $no++;
+        ?>
+        <div class="kolom">
+          <div class="img">
+            <a target="_blank" href="berita44.jpg">
+              <img src="<?php echo $data_blog['gambar'] ?> " alt="suku jawa" width="300" height="200">
+            </a>
+            <p>-<?php echo $data_blog['hari'] ?>, <?php echo $data_blog['tanggal'] ?> | <?php echo $data_blog['waktu'] ?> WIB</p>
+            <h3><?php echo $data_blog['judul'] ?></h3>
+            <div class="desc"><?php echo $data_blog['berita']?></div>
+          </div>
+        </div>
+
+        <button class="Tambah" ><a href="tambah_blog.php">Create New Blog</a></button>
+        
         <div class="selengkapnya">
           <a href="">Lihat selengkapnya >></a>
         </div>
