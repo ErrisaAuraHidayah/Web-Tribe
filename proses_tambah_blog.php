@@ -2,10 +2,10 @@
     if($_POST){
         $Nomer = $_POST['nomer'];
         //mulai upload gambar
-        $Gambar = $_FILES['gambar'];
-        // $Nama = $_FILES['file']['name'];
-        $Ukuran = $_FILES['file']['size'];
-        $file_tmp = $_FILES['file']['tmp_name'];
+        $Gambar = $_FILES['gambar']; // ini isinya, file yang berhasil di upload ke server (disimpan sementara di memory)
+        $Nama = 'img/' . basename($Gambar['name']); // tinggal menggunakn $Gambar, tidka perlu $_FILES['gambar'], variabel ini digunakan untuk tujuan penyimpnannya
+        $Ukuran = $Gambar['size'];
+        $file_tmp = $Gambar['tmp_name'];
         
         //akhir upload gambar
         $Judul = $_POST['judul'];
@@ -19,9 +19,9 @@
         }else {
             include "koneksi.php";
             //mulai upload gambar
-            move_uploaded_file($file_tmp, $Gambar);
+            move_uploaded_file($file_tmp, $Nama); // disini tinggal move file temporari di merori, ke path tujuan
             //akhir upload gambar
-            $insert=mysqli_query($conn, "insert into blog (nomer, gambar, judul, hari, tanggal, waktu, berita) value ('".$Nomer."','".$Gambar."','".$Judul."','".$Hari."','".$Tanggal."','".$Waktu."','".$Berita_singkat."')") or die(mysqli_error($conn));
+            $insert=mysqli_query($conn, "insert into blog (nomer, gambar, judul, hari, tanggal, waktu, berita) value ('".$Nomer."','".$Nama."','".$Judul."','".$Hari."','".$Tanggal."','".$Waktu."','".$Berita_singkat."')") or die(mysqli_error($conn));
 
             if($insert){
                 echo  "<script>alert('Sukses menambahkan blog');location.href='index.php';</script>";

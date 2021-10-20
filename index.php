@@ -181,24 +181,28 @@
             memiliki 4 marga besar sebagai berikut.</div>
         </div>
         </div>
+
+        <div class="kolom">
         <?php
           include 'koneksi.php';
           $qry_blog = mysqli_query($conn, "select * from blog where nomer = nomer");
           $no = 0;
-          while($data_blog=mysqli_fetch_array($qry_blog));
+          while($data_blog=mysqli_fetch_array($qry_blog)){
           $no++;
         ?>
-        <div class="kolom">
+        
           <div class="img">
-            <a target="_blank" href="berita44.jpg">
+            <a target="_blank" href="">
               <img src="<?php echo $data_blog['gambar'] ?> " alt="suku jawa" width="300" height="200">
             </a>
             <p>-<?php echo $data_blog['hari'] ?>, <?php echo $data_blog['tanggal'] ?> | <?php echo $data_blog['waktu'] ?> WIB</p>
             <h3><?php echo $data_blog['judul'] ?></h3>
             <div class="desc"><?php echo $data_blog['berita']?></div>
           </div>
+        <?php
+            }
+        ?>
         </div>
-
         <button class="Tambah" ><a href="tambah_blog.php">Create New Blog</a></button>
         
         <div class="selengkapnya">

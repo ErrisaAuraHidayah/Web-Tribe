@@ -25,7 +25,8 @@
 <div class="col-md"></div>
     <div class="col-md rounded bg-light" style="box-shadow: 4px 4px 5px -4px;padding:10px">
     <div class="col-md">
-    <form action="proses_tambah_blog.php" method="post">
+        <!-- untuk upload file, tag form haru menggunakan "enctype multipart/form-data" agar file yang di upload bisa di proses oleh server -->
+    <form action="proses_tambah_blog.php" method="post" enctype="multipart/form-data">
          <h3 style="text-align: center;">New Blog</h3>
         <div class="mb-3">
             <span>Nomer : </span>
@@ -47,13 +48,13 @@
             <span> Hari : </span>
             <select name="hari" class="form-control" required>
                 <option value="">--Pilih Hari-</option>
-                <option value="senin">Senin</option>
-                <option value="selasa">Selasa</option>
-                <option value="rabu">Rabu</option>
-                <option value="kamis">Kamis</option>
-                <option value="jumat">Jumat</option>
-                <option value="sabtu">Sabtu</option>
-                <option value="minggu">Minggu</option>
+                <option value="SENIN">SENIN</option>
+                <option value="SELASA">SELASA</option>
+                <option value="RABU">RABU</option>
+                <option value="KAMIS">KAMIS</option>
+                <option value="JUMAT">JUMAT</option>
+                <option value="SABTU">SABTU</option>
+                <option value="MINGGU">MINGGU</option>
             </select>
         </div>
         <br>
