@@ -21,7 +21,7 @@
     border: none;
     border-radius: 5px;
     color: white;
-    padding: 8px 550px;
+    padding: 8px 620px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -83,6 +83,7 @@
           <li><a href="">Home</a></li>
           <li><a href="#culture">Culture</a></li>
           <li><a href="#blog">Blog</a></li>
+          <li><a href="Sewa.php" >Rent</a></li>
           <li><a href="#aboutus">About Us</a></li>
           <li><a href="log in.php" class="daftar">Log In</a></li>
           <li><a href="sign up.php" class="daftar">Sign Up</a></li>
@@ -181,6 +182,8 @@
           <h3><a href="blog/berita1.php">Hikayat Orang Jawa di Kaledonia Baru</a></h3>
           <div class="desc">Selain Suriname, komunitas orang Jawa juga ada d negara Kelodonia Baru. Merea pertama kali
             datang ke sini pada tahun 1. Begini kisahnya</div>
+          <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
+          <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
         </div>
 
         <div class="img">
@@ -191,6 +194,8 @@
           <h3>Gambang Kromong: Sejarah, Instrumen, dan Contoh Alat Musiknya</h3>
           <div class="desc">Gambang kromong adalah kessenian Betawi yang terdiri dari beberapa instrumen musik. Berikut
             penjelasan dan contoh alat musik gambang kromong Indonesia. </div>
+          <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
+          <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
         </div>
 
         <div class="img">
@@ -201,6 +206,8 @@
           <h3>KarimunBesar, Pulau di Perbatasan yang Dihuni 25 Suku Berbeda</h3>
           <div class="desc">Sebuah keramaian pasti mengundang orang orang untuk datang. Adalah Pulai Karimunbesar yang
             terbilang kecil ini dihuni sebanyak 25 suku.</div>
+          <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
+          <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
         </div>
 
         <div class="img">
@@ -211,6 +218,8 @@
           <h3>Mengenal Suku Mentawai dan 4 Marga Besarnya</h3>
           <div class="desc">Suku Mentawai merupakan suku asli Indonesia yang hidup di Kepulauan Mentawai. Suku Mentawai
             memiliki 4 marga besar sebagai berikut.</div>
+          <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
+          <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
         </div>
         </div>
 
@@ -230,8 +239,8 @@
             <h3><?php echo $data_blog['judul'] ?></h3>
             <div class="desc"><?php echo $data_blog['berita']?></div>
 
-            <button class="ubah1" ><a href="tambah_blog.php">Edit</a></button>|
-            <button class="ubah2" ><a href="proses_hapus_blog.php?id=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
+            <button class="ubah1" ><a href="ubah_blog.php?nomer=<?php echo $data_blog['nomer'] ?>">Edit</a></button>|
+            <button class="ubah2" ><a href="proses_hapus_blog.php?nomer=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
           </div>
            
         <?php
