@@ -8,7 +8,9 @@ session_start();
         $_SESSION['cart'][]=array(
             'id_pakaian'=>$dt_pakaian['id_pakaian'],
             'nama_pakaian'=>$dt_pakaian['nama_pakaian'],
-            'qty'=>$_POST['jumlah_pinjam']
+            'qty'=>$_POST['jumlah_sewa'],
+            //ini buat nambahkan subtotal
+            'subtotal' =>$dt_pakaian['harga']*$_POST['jumlah_sewa']
         );
     }
     header('location: keranjang.php');
