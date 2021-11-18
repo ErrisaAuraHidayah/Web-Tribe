@@ -16,12 +16,16 @@
             font-family: 'Poppins';
 
         }
+        h2{
+            padding-top: 15px;
+        }
+        
     </style>
    
 </head>
 
-<body>
-    <h4 class="text-center font-weight-bold m-4">Daftar Pakaian Adat</h4>
+<body style="background-image: url('bg home.jpg'); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;">
+    <h2 class="text-center font-monospace m-1 " style="color: black;">Daftar Pakaian Adat</h2>
     <br>
     <div class="row align-items-center" style="padding-left: 15px; padding-right: 15px">
         <?php
@@ -32,11 +36,11 @@
             $no++;
         ?>
             <!-- Satu -->
-            <div class="col-sm-4">
+            <div class="col-sm-4 ">
                 <div class="card mb-4" style="max-width: 540px;">
-                    <div class="row g-0">
+                    <div class="row g-0 shadow-lg" style="background-color: #EEEEEE;" >
                         <div class="col-md-4">
-                            <img src="<?php echo $data_pakaian['gambar_pakaian']?>" class="img-thumbnail rounded-start " alt="..." style="width: 100%; height: 100%;">
+                            <img src="<?php echo $data_pakaian['gambar_pakaian']?>" class=" " alt="..." style="width: 100%; height: 100%;">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -47,7 +51,7 @@
                                 <i class="fa fa-star-half-o"></i>
                                 <i class="fa fa-star-o"></i>
 
-                                <p class="card-text"><?php echo $data_pakaian['deskripsi_pakaian']?></p>
+                                <p class="card-text"><?php echo substr($data_pakaian['deskripsi_pakaian'] , 0,130)?>...</p>
 
                                 <a href="sewa_pakaian.php?id_pakaian=<?php echo$data_pakaian['id_pakaian'] ?>" class="btn btn-primary">Sewa</a>
                                 <a href="#" class="btn btn-danger">Rp. <?php echo $data_pakaian['harga'] ?></a>
@@ -64,9 +68,9 @@
         <!-- Dua -->
         <div class="col-sm-4">
             <div class="card mb-4" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="pakaian/Pakaian Adat Bali.jpg" class="img-thumbnail rounded-start " alt="..." style="width: 100%; height: 100%;">
+                <div class="row g-0 shadow-lg">
+                    <div class="col-md-4 shadow-lg">
+                        <img src="pakaian/Pakaian Adat jawa.jpg" class="" alt="..." style="width: 100%; height: 100%;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -92,8 +96,9 @@
 
     </div>
 
-    <div class="d-grid gap-2" style="padding-left: 15px; padding-right: 15px">
-        <button class="btn btn-outline-primary" type="button"><a href="tambah_pakaian.php" >Create</a></button>
+    <div class="d-grid gap-2" style=" padding: 15px; ">
+        <!-- <button class="btn btn-primary" type="button"><a href="tambah_pakaian.php" >Create</a></button> -->
+        <a class="btn btn-primary" href="tambah_pakaian.php" role="button">Create </a>
     </div>
 
     </div>

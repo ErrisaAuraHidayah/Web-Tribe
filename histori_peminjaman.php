@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +11,22 @@
     <title>Data atau Histori Pengembalian</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+<style>
+    * {
+        padding: 10px;
+    }
+
+    h2 {
+
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Poppins';
+
+    }
+</style>
 
 <body>
-    <h2>Histori Peminjaman Pakaian</h2>
+    <h2 class="fw-bold p-3 mb-2 bg-secondary text-white">HISTORI PEMINJAMAN PAKAIAN</h2>
     <table class="table table-hover table-striped">
         <thead>
             <th>NO</th>
@@ -46,7 +59,7 @@
                     $button_kembali = "";
                 } else {
                     $status_kembali = "<label class='alert alert-danger'>Belum kembali</label>";
-                    $button_kembali = "<a href='kembali.php?id=" . $dt_histori['id_peminjaman_pakaian'] . "' class='btn btn-warning' onclick='return confirm(\"hello\")'>Kembalikan</a>";
+                    $button_kembali = "<a href='kembali.php?id=" . $dt_histori['id_peminjaman_pakaian'] . "' class='btn btn-danger text-white' onclick='return confirm(\"Yakin Mau Mengembalikan Pakaian ini ?\")'>Kembalikan</a>";
                 }
             ?>
                 <tr>
@@ -62,7 +75,7 @@
             ?>
         </tbody>
     </table>
- 
+
 
 
 </body>

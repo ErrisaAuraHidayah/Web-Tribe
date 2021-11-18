@@ -17,7 +17,7 @@
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
   <style>
     .Tambah {
-    background-color: #4CAF50; /* Green */
+    background-color: #af492f;
     border: none;
     border-radius: 5px;
     color: white;
@@ -33,7 +33,10 @@
 
   }
   .Tambah:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    color: #fff;
+    background-color: #814A48;
+    transition: 1s ease;
+    
 }
 
   .ubah1{
@@ -50,9 +53,10 @@
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    color: white;
   }
   .ubah2{
-    background-color: #BB2D3B; 
+    background-color: #DD7D5C; 
     border: none;
     border-radius: 5px;
     color: white;
@@ -115,7 +119,7 @@
           <a target="_blank" href="suku jawa.jpg">
             <img src="img/suku jawa.jpg" alt="suku jawa" width="300" height="200">
           </a>
-          <h3>Suku Jawa</h3>
+          <h3><a href="berita.php">Suku Jawa</a></h3>
           <div class="desc">Suku Jawa merupakan suku bangsa terbesar di Indonesia yang berasal dari Jawa....</div>
 
         </div>
@@ -237,10 +241,10 @@
             </a>
             <p>-<?php echo $data_blog['hari'] ?>, <?php echo $data_blog['tanggal'] ?> | <?php echo $data_blog['waktu'] ?> WIB</p>
             <h3><?php echo $data_blog['judul'] ?></h3>
-            <div class="desc"><?php echo $data_blog['berita']?></div>
+            <div class="desc"><?php echo substr($data_blog['berita'],0,120)?>...</div>
 
-            <button class="ubah1" ><a href="ubah_blog.php?nomer=<?php echo $data_blog['nomer'] ?>">Edit</a></button>|
-            <button class="ubah2" ><a href="proses_hapus_blog.php?nomer=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
+            <button class="ubah1" style="color: white;"><a href="ubah_blog.php?nomer=<?php echo $data_blog['nomer'] ?>">Edit</a></button>|
+            <button class="ubah2" style="color: white;"><a href="proses_hapus_blog.php?nomer=<?php echo $data_blog['nomer'] ?>" onClick="return confirm('yakin?'); "  >Hapus</a></button>
           </div>
            
         <?php
@@ -248,7 +252,7 @@
         ?>
 
         </div>
-        <button class="Tambah" ><a href="tambah_blog.php">Create New Blog</a></button>
+        <button class="Tambah" ><a href="tambah_blog.php" style="color: white;">Create New Blog</a></button>
       
         <div class="selengkapnya">
           <a href="">Lihat selengkapnya >></a>
