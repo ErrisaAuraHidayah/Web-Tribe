@@ -4,7 +4,7 @@ Website Tribe merupakah website yang bertujuan untuk mengenalkan suku suku di Pu
 Website ini terdapat fitur blog yang berisi informasi terbaru mengenai suku di Pulau Jawa
 Dan juga dilengkapi dengan fitur peminjaman pakaian adat.
 
-
+<!--
 ## Run Local
 
 Clone the project
@@ -26,6 +26,7 @@ Akses pada browser dengan url
 ```bash
   http://localhost/Web-Tribe/login.php
 ```
+-->
 
 ## Tech Stack
 
